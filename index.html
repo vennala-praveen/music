@@ -1,46 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Musical App</title>
-	<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Musical App</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-	<audio id="audio">
-		<audio id="audio1" src="Audios/Chikiri Chikiri.mp3"></audio>
-		<audio id="audio2" src="Audios/Shaitan.mp3"></audio>
-		<audio id="audio3" src="Audios/Ragile Ragile.mp3"></audio>
-		<audio id="audio4" src="Audios/Aizen.mp3"></audio>
-		<audio id="audio5" src="Audios/The Rage of Daaku.mp3"></audio>
-	</audio>
-	
-	<center>
-		<h1 id="h1"> Music </h1>		
-		<h4>click on image to play</h4>
-		<br>
-		<span>Chikiri Chikiri Song</span>
-		<span>War2 - Shaitan Song</span>
-		<span>Ragile Ragile Song</span>
-		
-    
-		<div class="row">
-    		<img id="im1" onclick="function1()" src="https://imgs.search.brave.com/eB2FU2PkO7rPk8lG8dvyJvm6RTCw9pcBWgT_-Wg7W-k/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5zZW5zY3JpdGlx/dWUuY29tL21lZGlh/LzAwMDAyMjc2NDQz/My8zMDAvcGVkZGku/anBn">&nbsp;&nbsp;
-    		<img id="im2" onclick="function2()" src="https://imgs.search.brave.com/K-KUapbVd8-VKDHNMke9GvMdQi_tHOQPPznqzbEnyOg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZmlsbWliZWF0/LmNvbS9waC1iaWcv/MjAyNS8wNy93YXIt/MjE3NTIwNDU4NTNf/Mi5qcGc">&nbsp;&nbsp;
-    		<img id="im3" onclick="function3()" src="https://imgs.search.brave.com/Q3pZmrb8x9tKsz40ADvBk1yDKDsYexa9bNIWpJFUYFQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuamRtYWdpY2Jv/eC5jb20vbW92aWVz/L2NlbnRyYWxpemVk/XzE2MTcxNTI0MjAy/NV8wM18wNl8wN18w/NF8yNV8yMjAuanBn">
-    		<br><br>	
-  		</div>
+<body class="bg-dark text-light">
 
-		<span>Aizen Treachery </span>
-		<span>The Rage of Daaku Song</span>
+  <div class="container text-center mt-4">
+    <h1 class="mb-3">🎵 Music App</h1>
+    <h4 class="text-warning">Click on image to play/stop</h4>
+    <br>
 
-		<div class="row">
-            <img id="im4" onclick="function4()" src="https://imgs.search.brave.com/xuhj21M5OOPAOZIs2-4QfURKyxhzhFgN03zNpUNmIMc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zMy56/ZXJvY2hhbi5uZXQv/MjQwLzM1LzM4LzM4/NDQ0MzUuYXZpZg">&nbsp;&nbsp;
-            <img id="im5" onclick="function5()" src="https://sensongsmp3.live/wp-content/uploads/2024/11/Daaku-Maharaaj-2024.jpg">
+    <div class="row">
+      <!-- Song 1 -->
+      <div class="col-md-4 mb-4">
+        <span>Chikiri Chikiri Song</span>
+        <div class="mb-2">
+          <img id="im1" onclick="toggleAudio('audio1')" 
+               src="https://imgs.search.brave.com/eB2FU2PkO7rPk8lG8dvyJvm6RTCw9pcBWgT_-Wg7W-k/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5zZW5zY3JpdGlx/dWUuY29tL21lZGlh/LzAwMDAyMjc2NDQz/My8zMDAvcGVkZGku/anBn" class="img-thumbnail">
         </div>
+        <audio id="audio1" src="Audios/Chikiri Chikiri.mp3"></audio>
+        <div>
+          <a href="Audios/Chikiri Chikiri.mp3" download class="btn btn-outline-info">Download</a>
+        </div>
+      </div>
 
-	</center>
+      <!-- Song 2 -->
+      <div class="col-md-4 mb-4">
+        <span>War2 - Shaitan Song</span>
+        <div class="mb-2">
+          <img id="im2" onclick="toggleAudio('audio2')" 
+               src="https://imgs.search.brave.com/K-KUapbVd8-VKDHNMke9GvMdQi_tHOQPPznqzbEnyOg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZmlsbWliZWF0/LmNvbS9waC1iaWcv/MjAyNS8wNy93YXIt/MjE3NTIwNDU4NTNf/Mi5qcGc" class="img-thumbnail">
+        </div>
+        <audio id="audio2" src="Audios/Shaitan.mp3"></audio>
+        <div>
+          <a href="Audios/Shaitan.mp3" download class="btn btn-outline-info">Download</a>
+        </div>
+      </div>
 
-    <script src="script.js"></script>
+      <!-- Song 3 -->
+      <div class="col-md-4 mb-4">
+        <span>Ragile Ragile Song</span>
+        <div class="mb-2">
+          <img id="im3" onclick="toggleAudio('audio3')" 
+               src="https://imgs.search.brave.com/Q3pZmrb8x9tKsz40ADvBk1yDKDsYexa9bNIWpJFUYFQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuamRtYWdpY2Jv/eC5jb20vbW92aWVz/L2NlbnRyYWxpemVk/XzE2MTcxNTI0MjAy/NV8wM18wNl8wN18w/NF8yNV8yMjAuanBn" class="img-thumbnail">
+        </div>
+        <audio id="audio3" src="Audios/Ragile Ragile.mp3"></audio>
+        <div>
+          <a href="Audios/Ragile Ragile.mp3" download class="btn btn-outline-info">Download</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Song 4 -->
+      <div class="col-md-6 mb-4">
+        <span>Aizen Treachery</span>
+        <div class="mb-2">
+          <img id="im4" onclick="toggleAudio('audio4')" 
+               src="https://imgs.search.brave.com/xuhj21M5OOPAOZIs2-4QfURKyxhzhFgN03zNpUNmIMc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zMy56/ZXJvY2hhbi5uZXQv/MjQwLzM1LzM4LzM4/NDQ0MzUuYXZpZg" class="img-thumbnail">
+        </div>
+        <audio id="audio4" src="Audios/Aizen.mp3"></audio>
+        <div>
+          <a href="Audios/Aizen.mp3" download class="btn btn-outline-info">Download</a>
+        </div>
+      </div>
+
+      <!-- Song 5 -->
+      <div class="col-md-6 mb-4">
+        <span>The Rage of Daaku Song</span>
+        <div class="mb-2">
+          <img id="im5" onclick="toggleAudio('audio5')" 
+               src="https://sensongsmp3.live/wp-content/uploads/2024/11/Daaku-Maharaaj-2024.jpg" class="img-thumbnail">
+        </div>
+        <audio id="audio5" src="Audios/The Rage of Daaku.mp3"></audio>
+        <div>
+          <a href="Audios/The Rage of Daaku.mp3" download class="btn btn-outline-info">Download</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

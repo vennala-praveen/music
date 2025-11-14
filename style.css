@@ -1,28 +1,30 @@
-body{
-	background-color: black;
-	
+body {
+  background-color: black;
 }
 
-h1{
-	color: aliceblue;
-	
+h1 {
+  color: aliceblue;
 }
 
-h4{
-	color: antiquewhite;
-	
+h4 {
+  color: antiquewhite;
 }
 
-span{
-	color: aliceblue;
-	padding-left:80px;
-	padding-right:80px;
+span {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: aliceblue;
 }
 
-img{
-	height: 200px;
-	width: 250px;
-	border-color: aliceblue;
-	border-style: double;
+img {
+  height: 200px;
+  width: 250px;
+  border: 3px double aliceblue;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
+img:hover {
+  transform: scale(1.05);
+}
