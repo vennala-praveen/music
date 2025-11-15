@@ -19,7 +19,7 @@ function toggleAudio(id) {
 }
 
 // Playlist order
-const playlist = ["audio1", "audio2", "audio3", "audio4", "audio5"];
+const playlist = ["audio1", "audio2", "audio3", "audio4", "audio5", "audio6", "audio7", "audio8", "audio9", "audio10"];
 
 // Attach event listeners for auto-play
 playlist.forEach((id, index) => {
