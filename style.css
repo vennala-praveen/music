@@ -29,16 +29,16 @@ span {
   color: aliceblue;
 }
 
-/* Uniform image sizing */
-img {
-  height: 220px;   /* fixed height */
-  width: 220px;    /* fixed width */
-  object-fit: cover; /* crop/scale to fit without distortion */
+
+.img-thumbnail {
+  height: 280px;  
+  width: 220px;    
+  object-fit: cover; 
   border: 3px double aliceblue;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
 
-img:hover {
+.img-thumbnail:hover {
   transform: scale(1.05);
 }
